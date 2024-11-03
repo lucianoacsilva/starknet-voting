@@ -5,13 +5,13 @@ use core::starknet::ContractAddress;
 #[starknet::interface]
 trait VoteTrait<T> {
     /// @dev Function that returns the current vote status
-    fn get_vote_status(self: @T) -> (u8, u8, u8, u8);
+    fn get_vote_status(self: @T) -> (u256, u256);
     /// @dev Function that checks if the user at the specified address is allowed to vote
     fn voter_can_vote(self: @T, user_address: ContractAddress) -> bool;
     /// @dev Function that checks if the specified address is registered as a voter
     fn is_voter_registered(self: @T, address: ContractAddress) -> bool;
     /// @dev Function that allows a user to vote
-    fn vote(ref self: T, vote: u8);
+    fn vote(ref self: T, vote: Array<u256>);
 }
 
 /// @dev Starknet Contract allowing three registered voters to vote on a proposal
@@ -24,16 +24,17 @@ mod Vote {
         StorageMapWriteAccess, Map
     };
 
-    const YES: u8 = 1_u8;
-    const NO: u8 = 0_u8;
+    const YES: u256 = 1_u256;
+    const NO: u256 = 0_u256;
 
     /// @dev Structure that stores vote counts and voter states
     #[storage]
     struct Storage {
-        yes_votes: u8,
-        no_votes: u8,
+        yes_votes: u256,
+        no_votes: u256,
         can_vote: Map::<ContractAddress, bool>,
         registered_voter: Map::<ContractAddress, bool>,
+        n: u256
     }
 
     /// @dev Contract constructor initializing the contract with a list of registered voters and 0
@@ -41,14 +42,18 @@ mod Vote {
     #[constructor]
     fn constructor(
         ref self: ContractState,
-        voters: Array<ContractAddress>
+        voters: Array<ContractAddress>,
+        yes_init: u256,
+        no_init: u256,
+        n: u256
     ) {
         // Register all voters by calling the _register_voters function
         self._register_voters(voters);
 
         // Initialize the vote count to 0
-        self.yes_votes.write(0_u8);
-        self.no_votes.write(0_u8);
+        self.yes_votes.write(yes_init);
+        self.no_votes.write(no_init);
+        self.n.write(n);
     }
 
     /// @dev Event that gets emitted when a vote is cast
@@ -63,7 +68,7 @@ mod Vote {
     #[derive(Drop, starknet::Event)]
     struct VoteCast {
         voter: ContractAddress,
-        vote: u8,
+        vote: Array<u256>,
     }
 
     /// @dev Represents an unauthorized attempt to vote
@@ -76,10 +81,9 @@ mod Vote {
     #[abi(embed_v0)]
     impl VoteImpl of super::VoteTrait<ContractState> {
         /// @dev Returns the voting results
-        fn get_vote_status(self: @ContractState) -> (u8, u8, u8, u8) {
+        fn get_vote_status(self: @ContractState) -> (u256, u256) {
             let (n_yes, n_no) = self._get_voting_result();
-            let (yes_percentage, no_percentage) = self._get_voting_result_in_percentage();
-            (n_yes, n_no, yes_percentage, no_percentage)
+            (n_yes, n_no)
         }
 
         /// @dev Check whether a voter is allowed to vote
@@ -93,19 +97,14 @@ mod Vote {
         }
 
         /// @dev Submit a vote
-        fn vote(ref self: ContractState, vote: u8) {
-            assert!(vote == NO || vote == YES, "VOTE_0_OR_1");
+        fn vote(ref self: ContractState, vote: Array<u256>) {
             let caller: ContractAddress = get_caller_address();
             self._assert_allowed(caller);
             self.can_vote.write(caller, false);
 
-            if (vote == NO) {
-                self.no_votes.write(self.no_votes.read() + 1_u8);
-            }
-            if (vote == YES) {
-                self.yes_votes.write(self.yes_votes.read() + 1_u8);
-            }
-
+            self.no_votes.write(self._add_parllier(self.no_votes.read(), *vote.at(0), self.n.read()));
+            self.yes_votes.write(self._add_parllier(self.yes_votes.read(), *vote.at(1), self.n.read()));
+            
             self.emit(VoteCast { voter: caller, vote: vote, });
         }
     }
@@ -123,6 +122,11 @@ mod Vote {
                 self.registered_voter.write(voter, true);
                 self.can_vote.write(voter, true);
             };
+        }
+
+        fn _add_parllier(ref self: ContractState, c1: u256, c2: u256, n: u256) -> u256 {
+            let n2 = n * n;
+            c1 * c2 % n2
         }
     }
 
@@ -147,25 +151,25 @@ mod Vote {
     #[generate_trait]
     impl VoteResultFunctionsImpl of VoteResultFunctionsTrait {
         // @dev Internal function to get the voting results (yes and no vote counts)
-        fn _get_voting_result(self: @ContractState) -> (u8, u8) {
-            let n_yes: u8 = self.yes_votes.read();
-            let n_no: u8 = self.no_votes.read();
+        fn _get_voting_result(self: @ContractState) -> (u256, u256) {
+            let n_yes: u256 = self.yes_votes.read();
+            let n_no: u256 = self.no_votes.read();
 
             (n_yes, n_no)
         }
 
         // @dev Internal function to calculate the voting results in percentage
-        fn _get_voting_result_in_percentage(self: @ContractState) -> (u8, u8) {
-            let n_yes: u8 = self.yes_votes.read();
-            let n_no: u8 = self.no_votes.read();
+        fn _get_voting_result_in_percentage(self: @ContractState) -> (u256, u256) {
+            let n_yes: u256 = self.yes_votes.read();
+            let n_no: u256 = self.no_votes.read();
 
-            let total_votes: u8 = n_yes + n_no;
+            let total_votes: u256 = n_yes + n_no;
 
-            if (total_votes == 0_u8) {
+            if (total_votes == 0_u256) {
                 return (0, 0);
             }
-            let yes_percentage: u8 = (n_yes * 100_u8) / (total_votes);
-            let no_percentage: u8 = (n_no * 100_u8) / (total_votes);
+            let yes_percentage: u256 = (n_yes * 100_u256) / (total_votes);
+            let no_percentage: u256 = (n_no * 100_u256) / (total_votes);
 
             (yes_percentage, no_percentage)
         }
