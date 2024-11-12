@@ -1,23 +1,17 @@
-(async () => {
-  const {
-    Account,
-    constants,
-    ec,
-    json,
-    stark,
-    RpcProvider,
-    hash,
-    CallData,
-  } = require("starknet");
+const {
+  Account,
+  constants,
+  ec,
+  json,
+  stark,
+  RpcProvider,
+  hash,
+  CallData,
+} = require("starknet");
 
-  // initialize provider
-  const provider = new RpcProvider({
-    nodeUrl:
-      "https://starknet-sepolia.infura.io/v3/1bc8c51edac6463eaebc92a80761f076",
-  });
-  // initialize existing pre-deployed account 0 of Devnet
-  // connect provider (Mainnet or Sepolia)
+const fs = require("fs");
 
+const generateAccount = async () => {
   // new Open Zeppelin account v0.8.1
   // Generate public and private key pair.
   const privateKey = stark.randomAddress();
@@ -38,4 +32,32 @@
     0
   );
   console.log("Precalculated account address=", OZcontractAddress);
+
+  return {
+    publicKey: starkKeyPub,
+    privateKey,
+    address: OZcontractAddress
+  };
+}
+
+(async () => {
+  
+
+  // initialize provider
+  const provider = new RpcProvider({
+    nodeUrl:
+      "https://starknet-sepolia.infura.io/v3/1bc8c51edac6463eaebc92a80761f076",
+  });
+  // initialize existing pre-deployed account 0 of Devnet
+  // connect provider (Mainnet or Sepolia)
+
+  const someArray = Array(3).fill(0);
+
+
+  const accountsObj = {
+    accounts: await Promise.all(someArray.map(async elem => await generateAccount()))
+  };
+
+  fs.writeFileSync('accounts.json', JSON.stringify(accountsObj, null, 2));
+  
 })();
