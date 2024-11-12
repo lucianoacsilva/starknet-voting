@@ -51,7 +51,7 @@ const generateAccount = async () => {
   // initialize existing pre-deployed account 0 of Devnet
   // connect provider (Mainnet or Sepolia)
 
-  const someArray = Array(3).fill(0);
+  const someArray = Array(10000).fill(0);
 
 
   const accountsObj = {
