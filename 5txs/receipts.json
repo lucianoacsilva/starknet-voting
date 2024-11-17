@@ -1,0 +1,244 @@
+{
+    "receipts": [
+        {
+            "actual_fee": {
+                "amount": "0xcf579da9274",
+                "unit": "WEI"
+            },
+            "block_hash": "0x5f8c685c0567c8963283e51ffb7a088d0d9329e9ce198514ce690cc0078704b",
+            "block_number": 315860,
+            "events": [
+                {
+                    "data": [
+                        "0x28ca818f2e7f75b717a35cfbbe4d02c859f22833bbd585e5fb3ab560ed93690",
+                        "0x2",
+                        "0x46ea09ee82",
+                        "0x0",
+                        "0x48dc271b8d",
+                        "0x0"
+                    ],
+                    "from_address": "0x68bd76993eff986b08a9c28e3e472611d584d271a49aba68ea4e762ec0a6f93",
+                    "keys": [
+                        "0x21d85f4389cb888ceaf7588bcebcebd09d3c1a57890503af1d9e7a2573352b5"
+                    ]
+                },
+                {
+                    "data": [
+                        "0x28ca818f2e7f75b717a35cfbbe4d02c859f22833bbd585e5fb3ab560ed93690",
+                        "0x1176a1bd84444c89232ec27754698e5d2e7e1a7f1539f12027f28b23ec9f3d8",
+                        "0xcf579da9274",
+                        "0x0"
+                    ],
+                    "from_address": "0x49d36570d4e46f48e99674bd3fcc84644ddd6b96f7c741b1562b82f9e004dc7",
+                    "keys": [
+                        "0x99cd8bde557814842a3121e8ddfd433a539b8c9f14bf31ebf108d12e6196e9"
+                    ]
+                }
+            ],
+            "execution_resources": {
+                "ec_op_builtin_applications": 3,
+                "pedersen_builtin_applications": 26,
+                "poseidon_builtin_applications": 7,
+                "range_check_builtin_applications": 545,
+                "steps": 11157
+            },
+            "execution_status": "SUCCEEDED",
+            "finality_status": "ACCEPTED_ON_L2",
+            "messages_sent": [],
+            "transaction_hash": "0x293933cac38cc273c33befb46277146cb6068b20aa8e06d4bfdddb2f4445b39",
+            "type": "INVOKE"
+        },
+        {
+            "actual_fee": {
+                "amount": "0xcf579da9274",
+                "unit": "WEI"
+            },
+            "block_hash": "0x5f8c685c0567c8963283e51ffb7a088d0d9329e9ce198514ce690cc0078704b",
+            "block_number": 315860,
+            "events": [
+                {
+                    "data": [
+                        "0x5cd2bfc4e37d1f9b8d43967f616cc4e440744e732f0de725c42533ba8eea22c",
+                        "0x2",
+                        "0x15f2a13f7d",
+                        "0x0",
+                        "0x34763364d0",
+                        "0x0"
+                    ],
+                    "from_address": "0x68bd76993eff986b08a9c28e3e472611d584d271a49aba68ea4e762ec0a6f93",
+                    "keys": [
+                        "0x21d85f4389cb888ceaf7588bcebcebd09d3c1a57890503af1d9e7a2573352b5"
+                    ]
+                },
+                {
+                    "data": [
+                        "0x5cd2bfc4e37d1f9b8d43967f616cc4e440744e732f0de725c42533ba8eea22c",
+                        "0x1176a1bd84444c89232ec27754698e5d2e7e1a7f1539f12027f28b23ec9f3d8",
+                        "0xcf579da9274",
+                        "0x0"
+                    ],
+                    "from_address": "0x49d36570d4e46f48e99674bd3fcc84644ddd6b96f7c741b1562b82f9e004dc7",
+                    "keys": [
+                        "0x99cd8bde557814842a3121e8ddfd433a539b8c9f14bf31ebf108d12e6196e9"
+                    ]
+                }
+            ],
+            "execution_resources": {
+                "ec_op_builtin_applications": 3,
+                "pedersen_builtin_applications": 26,
+                "poseidon_builtin_applications": 7,
+                "range_check_builtin_applications": 545,
+                "steps": 11157
+            },
+            "execution_status": "SUCCEEDED",
+            "finality_status": "ACCEPTED_ON_L2",
+            "messages_sent": [],
+            "transaction_hash": "0x3345f89479c39012b8d9168c84eccfb87967bc229179d22f9e265b29cb4b8ae",
+            "type": "INVOKE"
+        },
+        {
+            "actual_fee": {
+                "amount": "0xcf579da9274",
+                "unit": "WEI"
+            },
+            "block_hash": "0x5f8c685c0567c8963283e51ffb7a088d0d9329e9ce198514ce690cc0078704b",
+            "block_number": 315860,
+            "events": [
+                {
+                    "data": [
+                        "0x60fbbc26f81c44956b2d284f5de23ffc00309fe4d8e6abbf9821d71d601dcfe",
+                        "0x2",
+                        "0x43a91a2760",
+                        "0x0",
+                        "0x76b377f27",
+                        "0x0"
+                    ],
+                    "from_address": "0x68bd76993eff986b08a9c28e3e472611d584d271a49aba68ea4e762ec0a6f93",
+                    "keys": [
+                        "0x21d85f4389cb888ceaf7588bcebcebd09d3c1a57890503af1d9e7a2573352b5"
+                    ]
+                },
+                {
+                    "data": [
+                        "0x60fbbc26f81c44956b2d284f5de23ffc00309fe4d8e6abbf9821d71d601dcfe",
+                        "0x1176a1bd84444c89232ec27754698e5d2e7e1a7f1539f12027f28b23ec9f3d8",
+                        "0xcf579da9274",
+                        "0x0"
+                    ],
+                    "from_address": "0x49d36570d4e46f48e99674bd3fcc84644ddd6b96f7c741b1562b82f9e004dc7",
+                    "keys": [
+                        "0x99cd8bde557814842a3121e8ddfd433a539b8c9f14bf31ebf108d12e6196e9"
+                    ]
+                }
+            ],
+            "execution_resources": {
+                "ec_op_builtin_applications": 3,
+                "pedersen_builtin_applications": 26,
+                "poseidon_builtin_applications": 7,
+                "range_check_builtin_applications": 545,
+                "steps": 11157
+            },
+            "execution_status": "SUCCEEDED",
+            "finality_status": "ACCEPTED_ON_L2",
+            "messages_sent": [],
+            "transaction_hash": "0x77985000acc08ed71558bb77397edcb1a5729a6e841f94de0ac28ceaaaa410d",
+            "type": "INVOKE"
+        },
+        {
+            "actual_fee": {
+                "amount": "0xcf579da9274",
+                "unit": "WEI"
+            },
+            "block_hash": "0x5f8c685c0567c8963283e51ffb7a088d0d9329e9ce198514ce690cc0078704b",
+            "block_number": 315860,
+            "events": [
+                {
+                    "data": [
+                        "0x54f311d99bb589f41795db1d1651d1f0c96141394cd37a14a349ecc325e80e5",
+                        "0x2",
+                        "0xb1a6c7500",
+                        "0x0",
+                        "0x3acec70d10",
+                        "0x0"
+                    ],
+                    "from_address": "0x68bd76993eff986b08a9c28e3e472611d584d271a49aba68ea4e762ec0a6f93",
+                    "keys": [
+                        "0x21d85f4389cb888ceaf7588bcebcebd09d3c1a57890503af1d9e7a2573352b5"
+                    ]
+                },
+                {
+                    "data": [
+                        "0x54f311d99bb589f41795db1d1651d1f0c96141394cd37a14a349ecc325e80e5",
+                        "0x1176a1bd84444c89232ec27754698e5d2e7e1a7f1539f12027f28b23ec9f3d8",
+                        "0xcf579da9274",
+                        "0x0"
+                    ],
+                    "from_address": "0x49d36570d4e46f48e99674bd3fcc84644ddd6b96f7c741b1562b82f9e004dc7",
+                    "keys": [
+                        "0x99cd8bde557814842a3121e8ddfd433a539b8c9f14bf31ebf108d12e6196e9"
+                    ]
+                }
+            ],
+            "execution_resources": {
+                "ec_op_builtin_applications": 3,
+                "pedersen_builtin_applications": 26,
+                "poseidon_builtin_applications": 7,
+                "range_check_builtin_applications": 545,
+                "steps": 11157
+            },
+            "execution_status": "SUCCEEDED",
+            "finality_status": "ACCEPTED_ON_L2",
+            "messages_sent": [],
+            "transaction_hash": "0x4177c3973a6bfdad360c52c8eecd1e2d767e201d3d13f6908aedb30ce2a7095",
+            "type": "INVOKE"
+        },
+        {
+            "actual_fee": {
+                "amount": "0xcf579da9274",
+                "unit": "WEI"
+            },
+            "block_hash": "0x5f8c685c0567c8963283e51ffb7a088d0d9329e9ce198514ce690cc0078704b",
+            "block_number": 315860,
+            "events": [
+                {
+                    "data": [
+                        "0x206a0d8499f23da2773acba70d55028c45a4075d248d8320a10ad1437d54ed",
+                        "0x2",
+                        "0xcd10cbc33",
+                        "0x0",
+                        "0x4981318f0",
+                        "0x0"
+                    ],
+                    "from_address": "0x68bd76993eff986b08a9c28e3e472611d584d271a49aba68ea4e762ec0a6f93",
+                    "keys": [
+                        "0x21d85f4389cb888ceaf7588bcebcebd09d3c1a57890503af1d9e7a2573352b5"
+                    ]
+                },
+                {
+                    "data": [
+                        "0x206a0d8499f23da2773acba70d55028c45a4075d248d8320a10ad1437d54ed",
+                        "0x1176a1bd84444c89232ec27754698e5d2e7e1a7f1539f12027f28b23ec9f3d8",
+                        "0xcf579da9274",
+                        "0x0"
+                    ],
+                    "from_address": "0x49d36570d4e46f48e99674bd3fcc84644ddd6b96f7c741b1562b82f9e004dc7",
+                    "keys": [
+                        "0x99cd8bde557814842a3121e8ddfd433a539b8c9f14bf31ebf108d12e6196e9"
+                    ]
+                }
+            ],
+            "execution_resources": {
+                "ec_op_builtin_applications": 3,
+                "pedersen_builtin_applications": 26,
+                "poseidon_builtin_applications": 7,
+                "range_check_builtin_applications": 545,
+                "steps": 11157
+            },
+            "execution_status": "SUCCEEDED",
+            "finality_status": "ACCEPTED_ON_L2",
+            "messages_sent": [],
+            "transaction_hash": "0x352f9e41368d9421966456e41c332c8651a73553500a581b5c9ecaa29af15b",
+            "type": "INVOKE"
+        }
+    ]
+}
