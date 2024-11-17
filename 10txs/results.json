@@ -1,0 +1,124 @@
+{
+    "results": [
+        {
+            "execution": {
+                "tx_hash": "0x7524a32e8ce61a6d96274a0fa7fb94c659747adb4adcf37751a5760aa6bf6cd",
+                "tx_time": 5.230535513997893
+            },
+            "votes_table": {
+                "yes": 1,
+                "no": 0,
+                "yes_ciphered": 147724079276,
+                "no_ciphered_vote": 149561413297
+            }
+        },
+        {
+            "execution": {
+                "tx_hash": "0x3ac98741d4c258cf17163ebae33f3659dc7a6aee494dd5001baa3a9257c3d49",
+                "tx_time": 5.274448142001347
+            },
+            "votes_table": {
+                "yes": 1,
+                "no": 0,
+                "yes_ciphered": 289668782417,
+                "no_ciphered_vote": 3054750385
+            }
+        },
+        {
+            "execution": {
+                "tx_hash": "0x20756d799afca675959d20b5a2d4bddbd8b6ca88f4a7a2ac8a462cfd6bab6bb",
+                "tx_time": 5.249739176993899
+            },
+            "votes_table": {
+                "yes": 0,
+                "no": 0,
+                "yes_ciphered": 141263208716,
+                "no_ciphered_vote": 60432358086
+            }
+        },
+        {
+            "execution": {
+                "tx_hash": "0x1bf1d8b27e1a26ed9ac47791afe8b086d3e7c1fb7d5f1c21b5e252ec024edd5",
+                "tx_time": 5.1040718000003835
+            },
+            "votes_table": {
+                "yes": 1,
+                "no": 0,
+                "yes_ciphered": 256022332216,
+                "no_ciphered_vote": 254216235998
+            }
+        },
+        {
+            "execution": {
+                "tx_hash": "0x337435dc8a350f4402736d41145a0964582b23833a05d124f1e40c4276e7dd6",
+                "tx_time": 5.109221876999072
+            },
+            "votes_table": {
+                "yes": 1,
+                "no": 1,
+                "yes_ciphered": 115624669193,
+                "no_ciphered_vote": 230148504767
+            }
+        },
+        {
+            "execution": {
+                "tx_hash": "0x5c449d70315bff1007da20ddad6b3441f380cabad9b00b3cb679798a3b681db",
+                "tx_time": 5.168872818998352
+            },
+            "votes_table": {
+                "yes": 1,
+                "no": 1,
+                "yes_ciphered": 107112928927,
+                "no_ciphered_vote": 300249902360
+            }
+        },
+        {
+            "execution": {
+                "tx_hash": "0x199e28dbf7be8e31260176207d5da8c93cc7e347e40646dd5e2a159dea548f9",
+                "tx_time": 5.24515451300249
+            },
+            "votes_table": {
+                "yes": 1,
+                "no": 0,
+                "yes_ciphered": 182620840005,
+                "no_ciphered_vote": 237500811968
+            }
+        },
+        {
+            "execution": {
+                "tx_hash": "0x39406a953560b3a830cb13d61facbe095109b7184e0303c6061d4de9398ba37",
+                "tx_time": 6.189145408003242
+            },
+            "votes_table": {
+                "yes": 0,
+                "no": 1,
+                "yes_ciphered": 209083699891,
+                "no_ciphered_vote": 214658139233
+            }
+        },
+        {
+            "execution": {
+                "tx_hash": "0x7d70048f6014f9b2187837f816074c0d8b8270db60f604f3f3cd8c4965bf62f",
+                "tx_time": 5.210447452998778
+            },
+            "votes_table": {
+                "yes": 1,
+                "no": 0,
+                "yes_ciphered": 114897776590,
+                "no_ciphered_vote": 297743563602
+            }
+        },
+        {
+            "execution": {
+                "tx_hash": "0x6af88850e347b47f283c2a94141f9bd0d0293895a9d533ce1ef0cc85ceee36f",
+                "tx_time": 4.998314921998826
+            },
+            "votes_table": {
+                "yes": 1,
+                "no": 1,
+                "yes_ciphered": 59815453813,
+                "no_ciphered_vote": 487979078
+            }
+        }
+    ]
+}
