@@ -2,62 +2,62 @@
     "results": [
         {
             "execution": {
-                "tx_hash": "0x293933cac38cc273c33befb46277146cb6068b20aa8e06d4bfdddb2f4445b39",
-                "tx_time": 4.5492286599983345
+                "tx_hash": "0x461942010bda981c44b0f00718e790bb0cf5657cc3035673b31247a1e0a958a",
+                "tx_time": 4.247602493998784
             },
             "votes_table": {
                 "yes": 1,
                 "no": 0,
-                "yes_ciphered": 312931195789,
-                "no_ciphered_vote": 304574230146
+                "yes_ciphered": 1879264704,
+                "no_ciphered_vote": 178674735266
             }
         },
         {
             "execution": {
-                "tx_hash": "0x3345f89479c39012b8d9168c84eccfb87967bc229179d22f9e265b29cb4b8ae",
-                "tx_time": 5.364202377997572
+                "tx_hash": "0x500017db66923cccefcc5eea485c14c667840c04b0839a53459365e8fa6323b",
+                "tx_time": 4.281373978001284
             },
             "votes_table": {
                 "yes": 1,
-                "no": 1,
-                "yes_ciphered": 225321379024,
-                "no_ciphered_vote": 94264967037
-            }
-        },
-        {
-            "execution": {
-                "tx_hash": "0x77985000acc08ed71558bb77397edcb1a5729a6e841f94de0ac28ceaaaa410d",
-                "tx_time": 4.397990997000306
-            },
-            "votes_table": {
-                "yes": 1,
-                "no": 1,
-                "yes_ciphered": 31863570215,
-                "no_ciphered_vote": 290599872352
-            }
-        },
-        {
-            "execution": {
-                "tx_hash": "0x4177c3973a6bfdad360c52c8eecd1e2d767e201d3d13f6908aedb30ce2a7095",
-                "tx_time": 4.521107638000103
-            },
-            "votes_table": {
-                "yes": 0,
                 "no": 0,
-                "yes_ciphered": 252577254672,
-                "no_ciphered_vote": 47687955712
+                "yes_ciphered": 329811129258,
+                "no_ciphered_vote": 58517931743
             }
         },
         {
             "execution": {
-                "tx_hash": "0x352f9e41368d9421966456e41c332c8651a73553500a581b5c9ecaa29af15b",
-                "tx_time": 4.386633151996648
+                "tx_hash": "0x3a16265985bab3d5a7c46dace0815e707383520693528d3f63fd7c98f7e9f7e",
+                "tx_time": 4.275338438999825
+            },
+            "votes_table": {
+                "yes": 1,
+                "no": 0,
+                "yes_ciphered": 15255544988,
+                "no_ciphered_vote": 75670068683
+            }
+        },
+        {
+            "execution": {
+                "tx_hash": "0x633bb0ee00293829bc3d363165ef4b2d0b07df41fa73a4b8ee5a1b6d87ff54d",
+                "tx_time": 4.197576571999889
             },
             "votes_table": {
                 "yes": 0,
                 "no": 1,
-                "yes_ciphered": 19731257584,
-                "no_ciphered_vote": 55046880307
+                "yes_ciphered": 221909585440,
+                "no_ciphered_vote": 259253531848
+            }
+        },
+        {
+            "execution": {
+                "tx_hash": "0x23230e22a174693c573446c98c2ff72f358358ec38cf51cd25bc29931111e62",
+                "tx_time": 5.1059514909993595
+            },
+            "votes_table": {
+                "yes": 0,
+                "no": 1,
+                "yes_ciphered": 238885034213,
+                "no_ciphered_vote": 116221761438
             }
         }
     ]
