@@ -12,6 +12,8 @@ trait VoteTrait<T> {
     fn is_voter_registered(self: @T, address: ContractAddress) -> bool;
     /// @dev Function that allows a user to vote
     fn vote(ref self: T, vote: Array<u256>);
+    /// @dev Function that allows a user to register a voter
+    fn register_voters(ref self: T, voters: Array<ContractAddress>);
 }
 
 /// @dev Starknet Contract allowing three registered voters to vote on a proposal
@@ -94,6 +96,11 @@ mod Vote {
         /// @dev Check whether an address is registered as a voter
         fn is_voter_registered(self: @ContractState, address: ContractAddress) -> bool {
             self.registered_voter.read(address)
+        }
+
+        /// @dev Register a chunk of voters
+        fn register_voters(ref self: ContractState, voters: Array<ContractAddress>) {
+            self._register_voters(voters);
         }
 
         /// @dev Submit a vote
